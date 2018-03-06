@@ -11,7 +11,7 @@ Some Docker images to help working on latest Angular's code
 https://hub.docker.com/r/hader/angular-cli/
 
 #### How to use
-* docker build --force-rm -t hader/angular-cli .
+* docker pull hader/angular-cli
 * docker run -it --rm --user "$(id -u):$(id -g)" -v $(pwd):/app hader/angular-cli ng <ng command>
   
 #### To user the Dockerfile
@@ -27,7 +27,7 @@ https://hub.docker.com/r/hader/angular-cli/
 https://hub.docker.com/r/hader/create-angular-project/
 
 #### How to use
-* docker build --force-rm -t hader/create-angular-project .
+* docker pull hader/create-angular-project
 * docker run -it --rm --user "$(id -u):$(id -g)" -e "app_name=my-app-name" -v $(pwd):/app hader/create-angular-project
   
 #### To user the Dockerfile
