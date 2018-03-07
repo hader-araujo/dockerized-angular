@@ -15,7 +15,7 @@ https://hub.docker.com/r/hader/angular-cli/
 * docker pull hader/angular-cli
 * docker run -it --rm --user "$(id -u):$(id -g)" -v $(pwd):/app hader/angular-cli ng <ng command>
   
-#### To user the Dockerfile
+#### To use the Dockerfile
 * git clone https://github.com/hader-araujo/dockerized-angular
 * cd dockerized-angular
 * git checkout angular-cli
