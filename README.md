@@ -44,14 +44,6 @@ https://hub.docker.com/r/hader/create-angular-project/
 * docker pull hader/create-angular-project
 * docker run -it --rm --user "$(id -u):$(id -g)" -e "app_name=$app_name  --directory $app_name " -v $(pwd):/app hader/create-angular-project
 * cd $app_name
-* docker-compose build
-* docker-compose up
-
-## To create and run Angular - Windows
-* set app_name=change-the-app-name
-* git clone -b run-project --single-branch https://github.com/hader-araujo/dockerized-angular.git ./%app_name%
-* docker pull hader/create-angular-project
-* docker run -it --rm -e "app_name=%app_name%  --directory %app_name% " -v .:/app hader/create-angular-project
-* cd %app_name%
+* In ```package.json``` change ``` "start": "ng serve",``` to ``` "start": "ng serve -H 0.0.0.0```
 * docker-compose build
 * docker-compose up
