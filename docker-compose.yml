@@ -1,0 +1,13 @@
+version: "3.2"
+services:
+  web:
+    image: hader/angular-run
+    build: .
+    ports:
+      - "4200:4200"
+      - "49153:49153"
+    volumes:
+      - type: bind
+        source: .
+        target: /app
+    user: "1000:1000"
