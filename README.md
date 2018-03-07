@@ -1,6 +1,8 @@
 # Dockerizing @angular/cli
 
 Some Docker images to help working on latest Angular's code
+(Each Dockerfile is on your own branch)
+
 
 ## Requirements
 * Docker
