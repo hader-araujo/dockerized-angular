@@ -2,7 +2,7 @@ FROM hader/angular-cli
 LABEL maintainer="Hader Araujo - https://www.linkedin.com/in/haderaraujo/"
 
 COPY package.json ./
-RUN npm i && mkdir /app
+RUN npm i
 
 WORKDIR /app
 ENTRYPOINT  cp -R /node_modules /app  && npm start-docker 
