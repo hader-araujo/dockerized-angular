@@ -51,13 +51,3 @@ https://hub.docker.com/r/hader/create-angular-project/
 * git checkout create-project
 * docker build --force-rm -t hader/create-angular-project .
 * docker run -it --rm --user "$(id -u):$(id -g)" -e "app_name=my-app-name" -v $(pwd):/app hader/create-angular-project
-
-## To create and run Angular - Linux
-* app_name=change-the-app-name
-* git clone -b run-project --single-branch https://github.com/hader-araujo/dockerized-angular.git ./$app_name
-* docker pull hader/create-angular-project
-* docker run -it --rm --user "$(id -u):$(id -g)" -e "app_name=$app_name  --directory $app_name " -v $(pwd):/app hader/create-angular-project
-* cd $app_name
-* sed -i 's/ng serve/ng serve -H 0.0.0.0/g' package.json
-* docker-compose build
-* docker-compose up
