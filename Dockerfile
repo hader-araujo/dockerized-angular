@@ -5,7 +5,7 @@ COPY package.json ./
 RUN npm i && mkdir run-app
 
 WORKDIR /run-app
-ENTRYPOINT  cp -R /node_modules /run-app  && npm start
+ENTRYPOINT  cp -R /app/node_modules /run-app  && npm start
 EXPOSE 4200 49153
 
 ## To build the image without docker-compose
