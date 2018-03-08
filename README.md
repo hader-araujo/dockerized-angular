@@ -46,6 +46,6 @@ https://hub.docker.com/r/hader/create-angular-project/
 * docker pull hader/create-angular-project
 * docker run -it --rm --user "$(id -u):$(id -g)" -e "app_name=$app_name  --directory $app_name " -v $(pwd):/app hader/create-angular-project
 * cd $app_name
-* sed -i 's/"start": "ng serve"/"start": "start": "ng serve -H 0.0.0.0",""' package.json
+* sed -i 's/ng serve/ng serve -H 0.0.0.0/g' package.json
 * docker-compose build
 * docker-compose up
