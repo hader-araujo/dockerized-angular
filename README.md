@@ -8,6 +8,18 @@ Some Docker images to help working on latest Angular's code
 * Docker
 * Docker compose
 
+## To create and run Angular - Linux
+* app_name=change-the-app-name
+* git clone -b run-project --single-branch https://github.com/hader-araujo/dockerized-angular.git ./$app_name
+* docker pull hader/create-angular-project
+* docker run -it --rm --user "$(id -u):$(id -g)" -e "app_name=$app_name  --directory $app_name " -v $(pwd):/app hader/create-angular-project
+* cd $app_name
+* sed -i 's/ng serve/ng serve -H 0.0.0.0/g' package.json
+* docker-compose build
+* docker-compose up
+
+
+
 ## Image with the @angular/cli installed  globally
 
 #### On Docker hub
