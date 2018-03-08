@@ -9,5 +9,5 @@ services:
     volumes:
       - type: bind
         source: .
-        target: /app
+        target: /run-app
     user: "1000:1000"
